@@ -1,0 +1,20 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "a website about @reedcwilson",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reed Wilson",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "mailgun-js": "^0.5.4",
+    "nodemon": "^1.4.1",
+    "querystring": "^0.2.0",
+    "request": "^2.61.0"
+  }
+}
