@@ -202,7 +202,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        Copyright &copy; Reed Wilson 2015
+                        Copyright &copy; Reed Wilson 2017
                     </div>
                 </div>
             </div>
@@ -239,6 +239,7 @@
                               <ul>
                                 <li>Managed an <a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a> written in Angular to help internal developers ensure that their services were resilient.</li>
                                 <li>Created an out-of-process application to enable developers to make their services resilient and also to provide logging and circuit-breaking.</li>
+                                <li>Created infrastructure tools to manage AWS resources (tagging enforcement, forensic logging)</li>
                               </ul>
                             </div>
                             <ul class="list-inline item-details">
@@ -344,31 +345,36 @@
                             <img src="public/img/portfolio/coding.png" class="img-responsive img-centered" alt="">
 
                             <div class="modal-inner-content">
+                              <h3>AWS Technologies</h3>
+                              <h4>Core (EC2, VPC, S3, IAM, SNS, SES, SQS, CloudWatch, Config, CloudTrail, CloudFormation, Route53)</h4>
+                              <p>I have done extensive work in AWS. I have built a number of systems that leveraged most of the core services.</p>
+                              <h4>Lambda</h4>
+                              <p>I have created a number of lambdas in node.js, Python, and Java. Most have been larger lambdas that were written in Java. I am very comfortable testing these applications and managing an event-driven architecture.</p>
+                              <h4>Kinesis Firehose, Elasticsearch Service, Athena</h4>
+                              <p>I created a forensic logging solution for Ancestry using these technologies. I am very comfortable with the APIs and the workflow.</p>
+                              <h4>RDS, DynamoDB</h4>
+                              <p>Most of my applications have not required databases but were instead event-based. I have written a couple of web-services for Ancestry that required databases and used both RDS and DynamoDB in these.</p>
                               <h3>C languages</h3>
-                              <h4>C</h4>
-                              <p>My systems classes used C at times. I am less familiar with C as I am C++ but feel comfortable enough in C to be competent.</p>
-                              <h4>C++</h4>
-                              <p>My beginner classes as well as my systems classes were all done in C++. I am familiar with Makefiles, GCC and the object-oriented concepts as they are done in C++. I have no experience with the Boost library but am comfortable writing in C++.</p>
-                              <h4>C#</h4>
-                              <p>Ancestry used to use C# in almost all of its development. I am extremely familiar with Visual Studio and would say that C# is my most comfortable language.</p>
                               <h4>Java</h4>
-                              <p>Ancestry currently does development in Java and my earlier classes used Java extensively. I use IntelliJ as my default editor for Java so I am most comfortable with its environment.</p>
+                              <p>Ancestry currently does development in Java and my earlier college courses used Java extensively. I use IntelliJ as my default editor for Java so I am most comfortable with its environment.</p>
+                              <h4>C#</h4>
+                              <p>Ancestry used to use C# in almost all of its development. I have done quite a number of programs including WinForms, WPF, and ASP.NET. I am very familiar with Visual Studio.</p>
                               <h3>Web Technologies</h3>
                               <h4>AngularJS</h4>
-                              <p>I have written a number of websites using AngularJS. Most recently I used AngularJS in a SPA at Ancestry. I also wrote another site called <a href="https://github.com/reedcwilson/broadcasts">broadcasts</a> using AngularJS.</p>
+                              <p>I have written a number of websites using AngularJS. I have written several larger-scale applications using AngularJS SPAs at Ancestry. I also wrote another site called <a href="https://github.com/reedcwilson/broadcasts">broadcasts</a> using AngularJS.</p>
+                              <h4>React</h4>
+                              <p>I wrote a web application that helps solve the cooperative video game "Keep Talking and Nobody Explodes" as an exercise to learn React. It is called <a href="https://github.com/reedcwilson/bomb-manual-v2">bomb-manual-v2</a>.</p>
                               <h4>CSS</h4>
-                              <p>I am most comfortable using CSS frameworks like UIKit and Twitter Bootstrap. I can write regular CSS if needed but I use frameworks for my own work because of the ease-of-use and speed they provide. This site uses Twitter Bootstrap.</p>
+                              <p>I am most comfortable using CSS frameworks like Twitter Bootstrap. I can write regular CSS if needed but I use frameworks for my own work because of the ease-of-use and speed they provide. This site uses Twitter Bootstrap.</p>
                               <h4>HTML</h4>
                               <p>I am comfortable writing HTML and use it to describe my page and not simply lay out the content the way I wish.</p>
                               <h4>JavaScript</h4>
                               <p>I have used JavaScript extensively at Ancestry. In terms of DOM manipulation, I am most familiar with JQuery and AngularJS but have used plain JavaScript in some scenarios where dependencies were undesirable.</p>
                               <h3>Scripting Languages</h3>
                               <h4>Node.js</h4>
-                              <p>This website uses a Node.js back-end web server which I wrote. I have also created multiple websites using Node.js. Node.js is a really fun scripting language and have enjoyed writing small scripts for school and personal projects.</p>
+                              <p>I have created multiple websites using Node.js including some larger websites that were used as backends. Node.js is a really fun scripting language and have enjoyed writing small scripts for school and personal projects.</p>
                               <h4>Python</h4>
                               <p>I have taken multiple classes in school that were done primarily in Python. I am quite comfortable in this language and have done extensive scripting.</p>
-                              <h4>Ruby</h4>
-                              <p>I have contributed to a Ruby open source project called <a href="https://github.com/reedcwilson/syrup">syrup</a> which is used as a service to extract bank information. I wrote a tool to censor strings which I use to edit books I read called <a href="https://github.com/reedcwilson/censor-libs">censor-libs</a>.</p>
                               <h3>Database</h3>
                               <h4>MongoDB</h4>
                               <p>I have used MongoDB for school assignments as well as some personal projects. I have done two (<a href="https://drive.google.com/file/d/0B61tSETKk1a6LWY0STZFVGs5RG8/view?usp=sharing">one</a>, and <a href="https://drive.google.com/file/d/0B61tSETKk1a6WVFCbDhfQ3A1S28/view?usp=sharing">two</a>) in-depth research assignments on MongoDB and how it compares to other databases.</p>
@@ -388,8 +394,6 @@
                               <p>I use Git for all of my version control. I use it every day and manage my private repositories, which primarily consists of school assignments, on BitBucket and host all of my other projects on GitHub.</p>
                               <h4>OpenStack Swift</h4>
                               <p>I created a file copying and management system that interfaces with an OpenStack Swift cluster. The system essentially allowed users to use the Swift cluster as if it were a file system.</p>
-                              <h4>WPF</h4>
-                              <p>I have written quite a few applications using WPF. A couple of these have been very large scale applications and I would say that I am very proficient in writing WPF applications</p>
                             </div>
 
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -491,7 +495,7 @@
                             <div class="modal-inner-content">
 
                               <h2 id="about-family" class="about-header anchor">family</h2>
-                              Britney Wilson of American Fork, Utah and I were married on November 19, 2011 in the <a href="http://www.ldschurchtemples.com/">Salt Lake City Temple</a>. I graduated from BYU in April of 2015 with my undergraduate degree in Computer Science. We currently live in Pleasant Grove near where we both grew up. Britney finished up her degree in Family Life at BYU and currently works at DoTerra. Britney and I enjoy hiking, watching movies, eating good food, spending time with family and traveling whenever occasion allows.  
+                              Britney Wilson of American Fork, Utah and I were married on November 19, 2011 in the <a href="http://www.ldschurchtemples.com/">Salt Lake City Temple</a>. I graduated from BYU in April of 2015 with my undergraduate degree in Computer Science. We currently live in Pleasant Grove near where we both grew up. Britney finished up her degree in Family Life at BYU and takes care of our son Azure who was born in 2016. Britney and I enjoy hiking, watching movies, eating good food, spending time with family (especially our little boy) and traveling whenever occasion allows.  
                               <p></p>
                               You can find some of our photos <a href="http://reedcwilsonresume.blogspot.com/">here</a>.  
                               <h2 id="about-hobbies" class="about-header anchor">hobbies</h2>
@@ -504,6 +508,8 @@
                                 <li><a href="http://brandonsanderson.com/books/mistborn/">Mistborn</a> - Brandon Sanderson (I love all of his stuff really)</li>
                                 <li><a href="http://brandonsanderson.com/books/the-stormlight-archive/">The Stormlight Archive</a> - Brandon Sanderson</li>
                                 <li><a href="http://davideddings.wikia.com/wiki/The_Belgariad">The Belgariad</a> - David Eddings</li>
+                                <li><a href="http://readyplayerone.com/">Ready Player One</a> - Ernest Cline</li>
+                                <li><a href="http://www.andyweirauthor.com/books/the-martian-mass-market-mti-mm/the-martian-hc">The Martian</a> - Andy Weir</li>
                                 <li><a href="http://www.amazon.com/Enders-Game-The-Ender-Quintet/dp/0812550706">Ender's Game</a> - Orson Scott Card</li>
                                 <li><a href="http://oldkingdom.com.au/sabriel.html">Sabriel</a> - Garth Nix</li>
                                 <li><a href="http://www.bartimaeusbooks.com/">Bartimaeus</a> - Jonathan Stroud</li>
@@ -511,8 +517,10 @@
                                 <li><a href="http://www.cmu.edu/randyslecture/">The Last Lecture</a> - Randy Pausch and Jeffrey Zaslow</li>
                               </ul>
                               <p></p>
+                              I am also very active on Goodreads if you wish to see what I am reading.
+                              <p></p>
                               <h3 id="about-hobbies-music" class="about-header anchor">music</h3>
-                              I grew up surrounded by music. My siblings and I played at least two instruments growing up. My parents required us all to play the piano and urged us to pick up at least one more instrument. My extra instruments became the guitar, the trumpet and I also participated in choir. I enjoy playing soft piano and acoustic guitar music. I also enjoy listening to music throughout each day.  Lately it has been <a href="http://www.enya.com/">Enya</a>, <a href="http://timeline.coldplay.com/">Coldplay's new album</a>, <a href="http://thepianoguys.com/">The Piano Guys</a>, and occasionally some dubstep. Pandora through <a href="http://lifehacker.com/5713551/pianobar-is-a-flash-free-pandora-player-inside-your-terminal">Pianobar</a> makes all of this very convenient.
+                              I grew up surrounded by music. My siblings and I played at least two instruments growing up. My parents required us all to play the piano and urged us to pick up at least one more instrument. My extra instruments became the guitar, the trumpet and I also participated in choir. I enjoy playing soft piano and acoustic guitar music. I also enjoy listening to music throughout each day.  Lately it has been <a href="http://www.enya.com/">Enya</a>, <a href="http://timeline.coldplay.com/">Coldplay's new album</a>, <a href="http://thepianoguys.com/">The Piano Guys</a>, and occasionally some dubstep.
                               <p></p>
                               <p></p>
                               <h3 id="about-hobbies-eating" class="about-header anchor">eating</h3>
@@ -552,22 +560,22 @@
                               <h2 id="about-aspirations" class="about-header anchor">aspirations</h2>
                               <p></p>
                               <h3 id="about-aspirations-family" class="about-header anchor">family</h3>
-                              My wife and I want kids. We are interested in raising a family and helping children reach their full potential. We want to build a beautiful modern home somewhere in Utah Valley and live there until retirement if not longer.
+                              My wife and I prioritize family at the top of our lists. I want to spend as much time as I can with family and help our children grow up to achieve their full potential. We want to build a beautiful modern home somewhere in Utah Valley and live there until retirement if not longer.
                               <p></p>
                               <p></p>
                               <h3 id="about-aspirations-occupation" class="about-header anchor">occupation</h3>
                               While my goals in life never were to get into writing code, I have learned that I absolutely love to create things on the computer. It is magic to me and the best part is that I understand it (most of the time). I want to continue to write code the rest of my life. Whether it be small utilities, app for a smart phone or websites, I want to continue to hone my abilities to create. 
                               <p></p>
-                              In terms of an occupation, I don't know if I necessarily want to work as a rank and file developer for the duration of my career. I would like to get into management somewhere that has an influence on the future of a product I am or become passionate about. I am interested in start-ups because the developers there are more influential in the grand scheme of the product. I am getting business minor and am interested in an MBA because I want to be more involved than someone who is simply told what to code.
+                              In terms of an occupation, I don't know if I necessarily want to work as a rank and file developer for the duration of my career. I would like to get into management somewhere that has an influence on the future of a product I am or become passionate about. I am interested in start-ups because the developers there are more influential in the grand scheme of the product. I received a business minor and sometimes think about getting an MBA because I want to be more involved than someone who is simply told what to code.
                               <p></p>
                               <h3 id="about-aspirations-education" class="about-header anchor">education</h3>
-                              As previously mentioned, I am interested in getting an MBA degree. I have also toyed with the idea of getting a PH.D. in Computer Science. When I began my undergraduate education the first thing I wanted to do was to become a physician. Even though I no longer have those wishes I haven't quite given up the idea of being called a doctor and obtaining a PH.D. is one way I could do that.  In all seriousness though I believe I would enjoy the learning and research involved in a Computer Science PH.D. program.
+                              I have also toyed with the idea of getting a PH.D. in Computer Science. When I began my undergraduate education the first thing I wanted to do was to become a physician. Even though I no longer have those wishes I haven't quite given up the idea of being called a doctor and obtaining a PH.D. is one way I could do that.  In all seriousness though I believe I would enjoy the learning and research involved in a Computer Science PH.D. program.
                               <p></p>
                               I also want to continue learning regardless of how formal it might be. I love general education and want to continue to learn new things every day.
                               <p></p>
                               <h2 id="about-community" class="about-header anchor">community</h2>
                               <h3 id="about-community-teaching" class="about-header anchor">teaching</h3>
-                              I had the privilege of teaching a free <a href="https://github.com/reedcwilson/programming-fundamentals">programming fundamentals</a> course at my local library. I had about 10 students between the ages of 13 and 18 and had a great time teaching what I love.
+                              I had the privilege of teaching a free <a href="https://programming.reedcwilson.com">programming fundamentals</a> course at my local library. I had about 10 students between the ages of 13 and 18 and had a great time teaching what I love.
                               <h3 id="about-community-church" class="about-header anchor">church</h3>
                               I served a two-year <a href="http://www.mission.net/en/main_missionfaq.html">LDS mission</a> in Atlanta Georgia (<a href="http://missionhome.com/?missions=georgia-atlanta-north-mission">Georgia Atlanta North Mission</a>). I lived in Grayson, Lawrenceville, Sandy Plains, Athens and Washington during my two years there and had many opportunities to provide community service and to share my beliefs regarding <a href="https://lds.org/lang=eng">The Church of Jesus Christ of Latter-day Saints</a>. I continue to practice my faith and am always interested in ways I can help my community to be a stronger and more conducive place for families to raise children.
                               <p></p>
