@@ -2,580 +2,123 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A website about Reed Wilson">
-    <meta name="author" content="Reed Wilson">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reed Wilson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #3a4a3a 0%, #4a5a4a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
 
-    <!-- Custom CSS -->
-    <link href="public/css/resume.css" rel="stylesheet">
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-    <!-- Custom Fonts -->
-    <link href="public/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        .container:hover {
+            transform: translateY(-5px);
+        }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #fff, #f0f0f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-</head>
+        .social-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
 
-<body id="page-top" class="index">
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#page-top">Reed Wilson</a>
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .social-links {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+    </head>
+
+<body>
+    <div class="container">
+        <h1>Reed Wilson</h1>
+        <div class="social-links">
+            <a href="https://github.com/reedcwilson" target="_blank" rel="noopener noreferrer" class="social-link"
+                aria-label="GitHub">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/reedcwilson" target="_blank" rel="noopener noreferrer" class="social-link"
+                aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+            </a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#portfolio">Resume</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="#about">About</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="public/img/ninja.png" alt="">
-                    <div class="intro-text">
-                        <h1 class="name">Reed Wilson</h1>
-                        <hr class="star-light">
-                        <span class="skills">Software Engineer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Resume</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="public/img/portfolio/tie.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="public/img/portfolio/coding.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="public/img/portfolio/beaker.png" class="img-responsive" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>About</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>I love writing code. I was studying business when I started to learn about web technologies and eventually got in to the CS program at my university. I have thoroughly enjoyed creating applications that optimize people's time. I like to think of coding as a super power that lets you create anything you can imagine. </p>
-                </div>
-                <div class="col-lg-4">
-                  <p>I love the opportunity I have had to share my imagination with those around me for both work and pleasure.</p>
-                  <p>Other things I really enjoy doing include:</p>
-                  <ul>
-                    <li>exercise (cycling, running, soccer, basketball)</li>
-                    <li>singing, playing the guitar and the piano</li>
-                    <li>reading fantasy, sci-fi (what nerd doesn't like this stuff?) and Non-fiction / inspiring books</li>
-                    <li>games and traveling with the family</li>
-                    <li>learning new things</li>
-                  </ul>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="#portfolioModal4" class="btn btn-lg btn-outline portfolio-link" data-toggle="modal">
-                        <i class="fa fa-info-circle"></i> Learn more...
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-12">
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.linkedin.com/pub/reed-wilson/88/8a6/991" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="http://stackoverflow.com/users/2554442/carpenter" class="btn-social btn-outline"><i class="fa fa-fw fa-stack-overflow"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/reedcwilson" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; Reed Wilson 2018
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
     </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Experience</h2>
-                            <hr class="star-primary">
-                            <img src="public/img/portfolio/tie.png" class="img-responsive img-centered" alt="">
-
-
-                            <div class="modal-inner-content">
-                              <h3>Software Engineer</h3>
-                              <ul>
-                                <li>Managed an <a href="https://en.wikipedia.org/wiki/Single-page_application">SPA</a> written in Angular to help internal developers ensure that their services were resilient.</li>
-                                <li>Created an out-of-process application to enable developers to make their services resilient and also to provide logging and circuit-breaking.</li>
-                                <li>Created infrastructure tools to manage AWS resources (tagging enforcement, forensic logging)</li>
-                              </ul>
-                            </div>
-                            <ul class="list-inline item-details">
-                                <li>Company:
-                                    <strong><a href="http://www.ancestry.com/careers">Ancestry</a>
-                                    </strong>
-                                </li>
-                                <li>Time:
-                                    <strong>April 2015 - Present</strong>
-                                </li>
-                                <li>Reference:
-                                    <strong>Mark Melville</strong>
-                                </li>
-                            </ul>
-                            <div class="modal-inner-content">
-                              <h3>Software Engineer Intern</h3>
-                              <ul>
-                                <li>Created an archiving and file copying system that interfaced with OpenStack Swift</li>
-                                <li>Worked on a image editor using WPF and Pixel Shaders</li>
-                                <li>Created a website that consumed proprietary gridline processing data and displayed reports to administators</li>
-                              </ul>
-                            </div>
-                            <ul class="list-inline item-details">
-                                <li>Company:
-                                    <strong><a href="https://ancestry.com/careers">Ancestry</a>
-                                    </strong>
-                                </li>
-                                <li>Time:
-                                    <strong>June 2013 - April 2015</strong>
-                                </li>
-                                <li>Reference:
-                                    <strong>Michael Murdock</strong>
-                                </li>
-                            </ul>
-                            <div class="modal-inner-content">
-                              <h3>Imaging Production Team Lead</h3>
-                              <ul>
-                                <li>Developed a WPF application for specialists to track images and statistical information using a SQL database</li>
-                                <li>Developed multiple WinForms applications to accomplish minor image processing and file manipulations</li>
-                                <li>Supported the office manager in maintaining the production floor</li>
-                                <li>Had many opportunities to train employees as well as give presentations</li>
-                                <li>Led the team in production numbers in addition to performing administrative tasks</li>
-                              </ul>
-                            </div>
-                            <ul class="list-inline item-details">
-                                <li>Company:
-                                    <strong><a href="https://ancestry.com/careers">Ancestry</a>
-                                    </strong>
-                                </li>
-                                <li>Time:
-                                    <strong>April 2012 - June 2013</strong>
-                                </li>
-                                <li>Reference:
-                                    <strong>Josh Harman</strong>
-                                </li>
-                            </ul>
-                            <div class="modal-inner-content">
-                              <h3>Imaging Production Specialist</h3>
-                              <ul>
-                                <li>Handled historical documents and images and prepared them for publishing</li>
-                                <li>Was the top image producer in the department and learned how to troubleshoot the hardware and the software</li>
-                              </ul>
-                            </div>
-                            <ul class="list-inline item-details">
-                                <li>Company:
-                                    <strong><a href="https://ancestry.com/careers">Ancestry</a>
-                                    </strong>
-                                </li>
-                                <li>Time:
-                                    <strong>September 2010 - April 2012</strong>
-                                </li>
-                                <li>Reference:
-                                    <strong>Sally Trahan</strong>
-                                </li>
-                            </ul>
-
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Technologies</h2>
-                            <hr class="star-primary">
-                            <img src="public/img/portfolio/coding.png" class="img-responsive img-centered" alt="">
-
-                            <div class="modal-inner-content">
-                              <h3>AWS Technologies</h3>
-                              <h4>Core (EC2, VPC, S3, IAM, SNS, SES, SQS, CloudWatch, Config, CloudTrail, CloudFormation, Route53)</h4>
-                              <p>I have done extensive work in AWS. I have built a number of systems that leveraged most of the core services.</p>
-                              <h4>Lambda</h4>
-                              <p>I have created a number of lambdas in node.js, Python, and Java. Most have been larger lambdas that were written in Java. I am very comfortable testing these applications and managing an event-driven architecture.</p>
-                              <h4>Kinesis Firehose, Elasticsearch Service, Athena</h4>
-                              <p>I created a forensic logging solution for Ancestry using these technologies. I am very comfortable with the APIs and the workflow.</p>
-                              <h4>RDS, DynamoDB</h4>
-                              <p>Most of my applications have not required databases but were instead event-based. I have written a couple of web-services for Ancestry that required databases and used both RDS and DynamoDB in these.</p>
-                              <h3>C languages</h3>
-                              <h4>Java</h4>
-                              <p>Ancestry currently does development in Java and my earlier college courses used Java extensively. I use IntelliJ as my default editor for Java so I am most comfortable with its environment.</p>
-                              <h4>C#</h4>
-                              <p>Ancestry used to use C# in almost all of its development. I have done quite a number of programs including WinForms, WPF, and ASP.NET. I am very familiar with Visual Studio.</p>
-                              <h3>Scripting Languages</h3>
-                              <h4>Node.js</h4>
-                              <p>I have created multiple websites using Node.js including some larger websites that were used as backends. Node.js is a really fun scripting language and have enjoyed writing small scripts for school and personal projects.</p>
-                              <h4>Python</h4>
-                              <p>I have taken multiple classes in school that were done primarily in Python. I am quite comfortable in this language and have done extensive scripting.</p>
-                              <h3>Database</h3>
-                              <h4>MySQL</h4>
-                              <p>Ancestry switched from SQL Server to MySQL and I was able to learn about some of the differences between the two and how to interface with and use MySQL.</p>
-                              <h4>SQLite</h4>
-                              <p>I have used SQLite for quite a few personal projects. We also use SQLite at Ancestry as a way to send information back and forth between our vendors. We also built a recipe based system for managing operations performed on a collection of images.</p>
-                              <h3>Process Management</h3>
-                              <h4>Kanban</h4>
-                              <p>I use Kanban for my personal projects and the team projects I have done in school.</p>
-                              <h4>Scrum</h4>
-                              <p>I have participated in many scrum teams and am very familiar with this methodology.</p>
-                              <h3>Other</h3>
-                              <h4>Git</h4>
-                              <p>I use Git for all of my version control. I use it every day for both work projects and my private repositories.</p>
-                              <h4>OpenStack Swift</h4>
-                              <p>I created a file copying and management system that interfaces with an OpenStack Swift cluster. The system essentially allowed users to use the Swift cluster as if it were a file system.</p>
-                            </div>
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Education</h2>
-                            <hr class="star-primary">
-                            <img src="public/img/portfolio/beaker.png" class="img-responsive img-centered" alt="">
-
-                            <div class="modal-inner-content">
-                              <h3>Pleasant Grove High School - 2007</h3>
-                            </div>
-                            <div class="modal-inner-content">
-                              <h3>Brigham Young University - 2015</h3>
-                              <h4>Major - Computer Science</h4>
-                              <h5>Math</h5>
-                              <ul>
-                                <li><em>Algorithm Analysis</em>: Discussed and implemented various algorithm strategies and the math behind them. We specifically implemented divide and conquer, linear programming, dynamic programming and various search algorithms.</li>
-                                <li><em>Calculus 1 - Differential Calculus</em>: Learned how to derive all linear and continuous equations.</li>
-                                <li><em>Calculus 2 - Integral Calculus</em>: Learned various strategies for integration and also learned about common sequences and series.</li>
-                                <li><em>Computational and Probabilistic Models</em>: Discussed the theory and history of computation. We learned about finite state machines, grammars, turing models, and algorithm complexity (specifically what makes something an NP problem vs a P problem.</li>
-                                <li><em>Discrete Structures and Mathematics</em>: Learned boolean and relational algebra.</li>
-                                <li><em>Elementary Linear Algebra</em>: Learned how to perform various operations on matricies and how to do proofs.</li>
-                                <li><em>Newtonian Mechanics</em>: Experimented with and learned about basic Newtonian physics.</li>
-                                <li><em>Principles of Statistics</em>: Learned the basics about statistics and what is required to perform a statistically sound study including the math required.</li>
-                              </ul>
-                              <h5>Software Engineering</h5>
-                              <ul>
-                                <li><em>Advanced Programming Concepts</em>: Was introduced to design patterns, made a medium scale program that interacted with a database and had a server and client architecture.</li>
-                                <li><em>Computer Systems</em>: This was a systems class and introduced me to low-level machine architecture and programming. We programmed in assembler and C.</li>
-                                <li><em>Concepts of Programming Languages</em>: Learned what features good programming languages possess. We implemented many aspects of a programming language such as the parser, closures, garbage collection and type checking.</li>
-                                <li><em>Data Structures</em>: Was introduced to basic data structures and implemented many of them. We implemented linked lists, stacks, queues and binary search trees.</li>
-                                <li><em>Interactive Graphics and Image Processing</em>: Learned about two-dimensional graphics programming. Created a 2D image editor and a 3D image renderer.</li>
-                                <li><em>Internet Programming</em>: Learned about the architecture of the Internet and implemented socket programs, basic web servers and then made a web site using modern design principles.</li>
-                                <li><em>Software Design and Testing</em>: Implemented a large-scale version of the Settlers of Catan game as a web application while learning about design patterns and good testing practices.</li>
-                                <li><em>Software Engineering</em>: Worked on a team that consisted of various jobs for everyone in the class. This simulated a real software development team including managers, developers, testers, and marketers.</li>
-                              </ul>
-                              <h5>Specialization and Electives</h5>
-                              <ul>
-                                <li><em>Big Data Mining</em>: Used Hadoop to perform data mining operations on massive data sets. Conducted a study using data gathered from Steam's public API.</li>
-                                <li><em>Computer Communications and Networking</em>: Learned about the Internet's architecture and implemented TCP.</li>
-                                <li><em>Computer Security</em>: Learned about various encryption algorithms and about common computer vulnerabilities. Performed attacks on programs and systems that exhibit these vulnerabilities.</li>
-                                <li><em>Ethics and Computers in Society</em>: Discussed the history of the Software Development industry and the ethics regarding various decisions that software professionals make.</li>
-                                <li><em>Introduction to Artificial Intelligence</em>: Implemented several Artificial Intelligence algorithms and created AI bots that could compete in a simulated environment.</li>
-                                <li><em>Machine Learning and Data Mining</em>: Learned about neural networks, decision trees, data mining and clustering. Worked on basketball statistics data to determine the winner of games based on historical data. Was able to acheive ~80% accuracy on future games.</li>
-                                <li><em>Technical Communication and Writing</em>: Learned how to convey ideas and write in a technical setting. Conducted presentations and created users manuals for technical materials.</li>
-                              </ul>
-                              <h4>Minor</h4>
-                              <ul>
-                                <li><em>Communications in an Organizational Setting</em>: Learned about grammar usage and sentence structure to improve writing. Learned how to communicate in a professional setting.</li>
-                                <li><em>Economics: Principles and Problems</em>: Learned the basic principles of macro and micro economics.</li>
-                                <li><em>Marketing Management</em>: Discussed strategies for marketing products. We learned what large companies do to market as well as small start-ups.</li>
-                                <li><em>Principles of Accounting</em>: Learned the basic principles of accounting including the formulae needed to perform basic accounting.</li>
-                                <li><em>Principles of Finance</em>: Discussed corporate finances and learned about stocks, bonds, and annuities</li>
-                                <li><em>Principles of Statistics</em>: Learned the basics about statistics and what is required to perform a statistically sound study including the math required.</li>
-                              </ul>
-                            </div>
-                            
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>A little about Reed</h2>
-                            <hr class="star-primary">
-                            <img src="public/img/portfolio/rocket.png" class="img-responsive img-centered" alt="">
-
-                            <!-- My about me HTML -->
-                            <div class="modal-inner-content">
-
-                              <h2 id="about-family" class="about-header anchor">family</h2>
-                              Britney Wilson of American Fork, Utah and I were married on November 19, 2011 in the <a href="http://www.ldschurchtemples.com/">Salt Lake City Temple</a>. I graduated from BYU in April of 2015 with my undergraduate degree in Computer Science. We currently live in Pleasant Grove near where we both grew up. Britney finished up her degree in Family Life at BYU and takes care of our son Azure who was born in 2016. Britney and I enjoy hiking, watching movies, eating good food, spending time with family (especially our little boy) and traveling whenever occasion allows.  
-                              <p></p>
-                              You can find some of our photos <a href="http://reedcwilsonresume.blogspot.com/">here</a>.  
-                              <h2 id="about-hobbies" class="about-header anchor">hobbies</h2>
-                              <p></p>
-                              <h3 id="about-hobbies-reading" class="about-header">reading</h3>
-                              I thoroughly enjoy reading. I read whenever I can and can often be seen with a book. I grew up with a mother who was nearly obsessed with books which meant we had thousands of books in bookshelves littered throughout our house for us kids to enjoy. My favorite genres are fantasy and science fiction. I also enjoy classics like <a href="http://www.amazon.com/Count-Monte-Cristo-Penguin-Classics/dp/0140449264">The Count of Monte Cristo</a> and <a href="http://www.amazon.com/Tale-Cities-Dover-Thrift-Editions/dp/0486406512">A Tale of Two Cities</a> but I will read just about any good book. Some of my favorites include:
-                              <p></p>
-                              <ul>
-                                <li><a href="http://www.dragonmount.com/Books/index.php">The Wheel of Time</a> - Robert Jordan</li>
-                                <li><a href="http://brandonsanderson.com/books/mistborn/">Mistborn</a> - Brandon Sanderson (I love all of his stuff really)</li>
-                                <li><a href="http://brandonsanderson.com/books/the-stormlight-archive/">The Stormlight Archive</a> - Brandon Sanderson</li>
-                                <li><a href="http://davideddings.wikia.com/wiki/The_Belgariad">The Belgariad</a> - David Eddings</li>
-                                <li><a href="http://readyplayerone.com/">Ready Player One</a> - Ernest Cline</li>
-                                <li><a href="http://www.andyweirauthor.com/books/the-martian-mass-market-mti-mm/the-martian-hc">The Martian</a> - Andy Weir</li>
-                                <li><a href="http://www.amazon.com/Enders-Game-The-Ender-Quintet/dp/0812550706">Ender's Game</a> - Orson Scott Card</li>
-                                <li><a href="http://oldkingdom.com.au/sabriel.html">Sabriel</a> - Garth Nix</li>
-                                <li><a href="http://www.bartimaeusbooks.com/">Bartimaeus</a> - Jonathan Stroud</li>
-                                <li><a href="http://www.artemisfowl.com/">Artemis Fowl</a> - Eoin Colfer</li>
-                                <li><a href="http://www.cmu.edu/randyslecture/">The Last Lecture</a> - Randy Pausch and Jeffrey Zaslow</li>
-                              </ul>
-                              <p></p>
-                              I am also very active on Goodreads if you wish to see what I am reading.
-                              <p></p>
-                              <h3 id="about-hobbies-music" class="about-header anchor">music</h3>
-                              I grew up surrounded by music. My siblings and I played at least two instruments growing up. My parents required us all to play the piano and urged us to pick up at least one more instrument. My extra instruments became the guitar, the trumpet and I also participated in choir. I enjoy playing soft piano and acoustic guitar music. I also enjoy listening to music throughout each day.  Lately it has been <a href="http://www.enya.com/">Enya</a>, <a href="http://timeline.coldplay.com/">Coldplay</a>, <a href="http://thepianoguys.com/">The Piano Guys</a>, and occasionally some dubstep.
-                              <p></p>
-                              <p></p>
-                              <h3 id="about-hobbies-eating" class="about-header anchor">eating</h3>
-                              As I mentioned earlier, I really like to eat. I am not at all a picky eater and will try just about anything. Britney and I love the <a href="http://locations.thecheesecakefactory.com/ut/Salt%20Lake%20City-157.html/">Cheesecake Factory</a> and will sometimes make the one hour drive up to Salt Lake City just to go there. We have also been known to go to Park City to eat at the <a href="http://www.theeatingestablishment.net/">Eating Establishment</a>. We like to find good food wherever we go. Some local places we like to go include:
-                              <p></p>
-                              <ul>
-                                <li><a href="http://burgerssupreme.com/">Burgers Supreme</a></li>
-                                <li><a href="http://cafezupas.com/">Zupas</a></li>
-                                <li><a href="http://cubbys.co/">Cubby's</a></li>
-                                <li><a href="https://www.firebirdpizza.com/">Firebird Pizza</a></li>
-                                <li><a href="https://www.tucanos.com/">Tucanos</a></li>
-                                <li><a href="http://lajollagroves.com/">La Jolla Groves</a></li>
-                              </ul>
-                              <p></p>
-                              <h3 id="about-hobbies-sports" class="about-header anchor">sports</h3>
-                              I grew up playing every sport I could. These included, Basketball, Football, Baseball, Soccer, Wrestling, Swimming, Gymnastics, and Racquetball. Almost all of those phased out except Soccer, Basketball and Racquetball. I played soccer for my high school team and played recreation basketball throughout and after high school. I still look for opportunities to play any of those sports. 
-                              <p></p>
-                              Since graduating from college I have really gotten into running, cycling and now mountain biking. I love trail running in the mountains near Utah Valley. I also enjoy biking the Alpine Loop, South Fork and anywhere else that is challenging and scenic. I recently got into mountain biking and it has been a blast.
-                              <p></p>
-                              I am also a big BYU sports fan. I follow football and basketball primarily but will cheer on anyone wearing the BYU uniform (provided they aren't complete knuckleheads).
-                              <p></p>
-                              <h3 id="about-hobbies-games" class="about-header anchor">games</h3>
-                              My brothers and I played a lot of video games together when we were young. We were often satisfied simply to watch one of the brothers play. We had many of the classic games on NES like <a href="http://nintendo.wikia.com/wiki/Duck_Hunt">Duck Hunt</a>, <a href="http://tecmobowl.org/playtecmo2014">Techmo Bowl</a> and <a href="http://punchout.wikia.com/wiki/Mike_Tyson">Mike Tyson Punch-Out</a>. We enjoyed a succession of consoles from Sega to N64 to PS2 to XBox360. We also played PC games like <a href="http://cyan.com/games/myst/">Myst</a>, <a href="http://us.blizzard.com/en-us/games/hots/landing/">Starcraft</a>, and <a href="http://us.blizzard.com/en-us/games/war3/">Warcraft</a> (though not World of Warcraft). We still sometimes get together to play games and prefer ones we can all play together. 
-                              <p></p>
-                              We also all enjoy board and card games. We try to get together regularly to play some kind of game. Some of our favorites include:
-                              <ul>
-                                <li><a href="https://en.wikipedia.org/wiki/Tichu">Tichu</a></li>
-                                <li><a href="https://en.wikipedia.org/wiki/Rook_(card_game)">Rook</a> (also checkout <a href="http://blackbird.donwilson.net/">Blackbird</a>)</li>
-                                <li><a href="https://en.wikipedia.org/wiki/Sequence_(game)">Sequence</a></li>
-                                <li><a href="http://www.amazon.com/Gamewright-317-Forbidden-Island/dp/B003D7F4YY">Forbidden Island</a></li>
-                                <li><a href="http://www.amazon.com/Z-Man-Games-ZMG-71100-Pandemic/dp/B00A2HD40E">Pandemic</a></li>
-                                <li><a href="http://www.amazon.com/Betrayal-At-House-The-Hill/dp/B003HC9734">Betrayal at House on the Hill</a></li>
-                              </ul>
-                              <p></p>
-                              <h3 id="about-hobbies-traveling" class="about-header anchor">traveling</h3>
-                              We aren't big-time travelers but nevertheless enjoy traveling. We enjoy going to California and visiting Disneyland, the beaches and other random places in the Greater Los Angeles and San Diego areas. St. George is a convenient getaway for us and like to visit <a href="https://www.tuacahn.org/Online/default.asp">Tuacahn</a>, eat some of the good food down there and visit Zion National Park. Utah has some breathtaking <a href="http://www.utah.com/nationalparks/">national</a> and state parks which we like to visit. We made a trip to Manhattan after I graduated as a graduation present to both of us which was a blast. We sometimes visit family in <a href="http://www.tripadvisor.com/Tourism-g30354-Alta_Wyoming-Vacations.html">Alta Wyoming</a> and we spend a week at <a href="http://www.idealbeachresort.com/">Bear Lake</a> every year.  We look forward to many opportunities in the future to travel.
-                              <p></p>
-                              <h2 id="about-aspirations" class="about-header anchor">aspirations</h2>
-                              <p></p>
-                              <h3 id="about-aspirations-family" class="about-header anchor">family</h3>
-                              My wife and I prioritize family at the top of our lists. I want to spend as much time as I can with family and help our children grow up to achieve their full potential. We want to build a beautiful modern home somewhere in Utah Valley and live there until retirement if not longer.
-                              <p></p>
-                              <p></p>
-                              <h3 id="about-aspirations-occupation" class="about-header anchor">occupation</h3>
-                              While my goals in life never were to get into writing code, I have learned that I absolutely love to create things on the computer. It is magic to me and the best part is that I understand it (most of the time). I want to continue to write code the rest of my life. Whether it be small utilities, smartphone apps, or websites, I want to continue to hone my abilities to create. 
-                              <p></p>
-                              <h3 id="about-aspirations-education" class="about-header anchor">education</h3>
-                              I have toyed with the idea of getting a PH.D. in Computer Science. When I began my undergraduate education the first thing I wanted to do was to become a physician. Even though I no longer have those wishes I haven't quite given up the idea of being called a doctor and obtaining a PH.D. is one way I could do that. In all seriousness though I believe I would enjoy the learning and research involved in a Computer Science PH.D. program.
-                              <p></p>
-                              I also want to continue learning regardless of how formal it might be. I love general education and want to continue to learn new things every day.
-                              <p></p>
-                              <h2 id="about-community" class="about-header anchor">community</h2>
-                              <h3 id="about-community-teaching" class="about-header anchor">teaching</h3>
-                              I have had the privilege of being a volunteer teacher for several <a href="https://programming.reedcwilson.com">programming fundamentals</a> courses at my local library. I have had a great time teaching what I love.
-                              <h3 id="about-community-church" class="about-header anchor">church</h3>
-                              I served a two-year <a href="http://www.mission.net/en/main_missionfaq.html">LDS mission</a> in Atlanta Georgia (<a href="http://missionhome.com/?missions=georgia-atlanta-north-mission">Georgia Atlanta North Mission</a>). I lived in Grayson, Lawrenceville, Sandy Plains, Athens and Washington during my two years there and had many opportunities to provide community service and to share my beliefs regarding <a href="https://lds.org/lang=eng">The Church of Jesus Christ of Latter-day Saints</a>. I continue to practice my faith and am always interested in ways I can help my community to be a stronger and more conducive place for families to raise children.
-                              <p></p>
-
-                            </div>
-
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-68318311-3', 'auto');
-      ga('send', 'pageview');
-    </script>
-
-    <!-- jQuery -->
-    <script src="public/js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="public/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="public/js/classie.js"></script>
-    <script src="public/js/cbpAnimatedHeader.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="public/js/resume.js"></script>
-
 </body>
 
 </html>
