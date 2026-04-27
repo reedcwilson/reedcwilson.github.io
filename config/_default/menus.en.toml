@@ -10,7 +10,20 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
-# Navigation is intentionally empty until authored sections are added.
+[[main]]
+ name = "Posts"
+ pageRef = "posts"
+ weight = 10
+
+[[main]]
+ name = "Links"
+ pageRef = "links"
+ weight = 20
+
+[[main]]
+ name = "{{< icon \"tag\" >}}"
+ pageRef = "tags"
+ weight = 30
 
 # [[main]]
 #  name = "More stuff"

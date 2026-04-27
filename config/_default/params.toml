@@ -10,7 +10,7 @@ defaultAppearance = "dark" # valid options: light or dark
 autoSwitchAppearance = true
 
 enableA11y = false
-enableSearch = false
+enableSearch = true
 enableCodeCopy = true
 enableStructuredBreadcrumbs = true
 enableStyledScrollbar = true # disable to use native scrollbar style (defaults to true)
