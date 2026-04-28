@@ -35,6 +35,7 @@ IMAGE_EXTENSIONS = {
 }
 WIKI_EMBED_PATTERN = re.compile(r"!\[\[([^\]]+)\]\]")
 MARKDOWN_IMAGE_PATTERN = re.compile(r"!\[([^\]]*)\]\(([^)]+)\)")
+FRONT_MATTER_DELIMITERS = ("---", "+++")
 
 
 class SyncError(RuntimeError):
@@ -127,13 +128,36 @@ def is_ignored(path: Path) -> bool:
     return any(part in IGNORED_DIRS or part == "_resources" for part in path.parts)
 
 
-def discover_notes(source_root: Path, destination_root: Path) -> list[Note]:
+def has_front_matter(path: Path) -> bool:
+    """Return whether a Markdown file begins with a YAML/TOML front-matter block."""
+
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            opener = handle.readline().strip()
+            if opener not in FRONT_MATTER_DELIMITERS:
+                return False
+            for line in handle:
+                if line.strip() == opener:
+                    return True
+    except OSError:
+        return False
+    return False
+
+
+def discover_notes(
+    source_root: Path, destination_root: Path
+) -> tuple[list[Note], list[Path]]:
     """Discover all Markdown files that should be synchronized."""
 
     notes: list[Note] = []
+    skipped: list[Path] = []
     for source_path in sorted(source_root.rglob("*.md")):
         relative_path = source_path.relative_to(source_root)
         if is_ignored(relative_path):
+            continue
+
+        if not has_front_matter(source_path):
+            skipped.append(relative_path)
             continue
 
         is_section_index = relative_path.name == "_index.md"
@@ -154,7 +178,7 @@ def discover_notes(source_root: Path, destination_root: Path) -> list[Note]:
             )
         )
 
-    return notes
+    return notes, skipped
 
 
 def build_resource_index(asset_root: Path) -> dict[str, list[Path]]:
@@ -571,9 +595,17 @@ def main() -> int:
         destination_root = ensure_directory(args.destination, "Destination folder")
         asset_root = discover_vault_root(source_root)
 
-        notes = discover_notes(source_root, destination_root)
+        notes, skipped_notes = discover_notes(source_root, destination_root)
         resource_index = build_resource_index(asset_root)
         live_notes = {note.relative_path.as_posix(): note for note in notes}
+
+        if skipped_notes:
+            print(
+                f"Skipped {len(skipped_notes)} note(s) without front-matter:",
+                file=sys.stderr,
+            )
+            for relative_path in skipped_notes:
+                print(f"  - {relative_path.as_posix()}", file=sys.stderr)
 
         touched_paths = prune_deleted_notes(destination_root, live_notes)
         for note in notes:
