@@ -29,6 +29,6 @@ Frustrating:
 * Still a text-only model.
 * Chinese character leakage. This has plagued Chinese models forever, and while it seems to happen less, my own testing of this model is no exception.
 
-**Resources**:
-* [Technical Report]([https://huggingface.co/collections/deepseek-ai/deepseek-v4](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/DeepSeek_V4.pdf)
+[Technical Report](https://huggingface.co/collections/deepseek-ai/deepseek-v4)
+
 {{< youtubeLite id="UV1WDNe4J5w" label="Matthew Berman: DeepSeek v4" >}}
