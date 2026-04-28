@@ -5,8 +5,8 @@ lastmod: 2026-04-27T21:22:08-06:00
 draft: false
 description: ""
 tags:
-  - Work-Life
-  - Career-Advice
+  - work-life
+  - career-advice
 categories: []
 ---
 Quoting [Nikhyl Singhal](https://www.lennysnewsletter.com/p/why-half-of-product-managers-are-in-trouble)

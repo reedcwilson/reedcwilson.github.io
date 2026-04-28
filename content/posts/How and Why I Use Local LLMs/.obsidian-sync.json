@@ -1,0 +1,9 @@
+{
+  "files": [
+    "gemma4-benchmark.png",
+    "gemma4-vram.png",
+    "index.md"
+  ],
+  "kind": "leaf",
+  "source": "posts/How and Why I Use Local LLMs.md"
+}
