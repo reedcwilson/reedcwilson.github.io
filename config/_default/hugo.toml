@@ -14,6 +14,8 @@ summaryLength = 0
 buildDrafts = false
 buildFuture = false
 
+titleCaseStyle = 'none'
+
 enableEmoji = true
 
 googleAnalytics = "G-6YVR6CVSQ6"
@@ -41,6 +43,7 @@ googleAnalytics = "G-6YVR6CVSQ6"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
 
 [related]
   threshold = 0

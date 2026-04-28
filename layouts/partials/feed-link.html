@@ -1,0 +1,14 @@
+{{ $context := .context | default . }}
+{{ $class := .class | default "" }}
+{{ $label := .label | default (printf "%s RSS feed" $context.Title) }}
+{{ with $context.OutputFormats.Get "RSS" }}
+  <a
+    class="{{ $class }} hover:text-primary-700 dark:hover:text-primary-400"
+    href="{{ .RelPermalink }}"
+    aria-label="{{ $label }}"
+    title="{{ $label }}"
+    type="{{ .MediaType.Type }}"
+  >
+    <span class="inline-block align-text-bottom">{{ partial "icon.html" "rss" }}</span>
+  </a>
+{{ end }}
