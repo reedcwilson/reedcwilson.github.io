@@ -1,3 +1,13 @@
+---
+title: DeepSeek v4
+date: 2026-04-28T12:09:18-06:00
+lastmod: 2026-04-28T12:09:18-06:00
+draft: true
+description: ""
+tags: []
+categories: []
+---
+
 Is it as good as people say?
 https://youtu.be/UV1WDNe4J5w?si=u_IQHVUNZ2VAkL38
 
