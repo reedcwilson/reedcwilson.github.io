@@ -9,6 +9,7 @@ tags:
   - ai-rivalry
   - china
   - llms
+  - ai-models
 categories: []
 ---
 The long-awaited DeepSeek v4 was released last week. You'll find all kinds of comments about this from, "[the End of American AI Cost Dominance](https://globalgeopolitics.co.uk/2026/04/27/deepseek-and-the-end-of-american-ai-cost-dominance/)" to "[DeepSeek V4 is Sh!tty](https://medium.com/data-science-in-your-pocket/deepseek-v4-is-shitty-b067af243019)" (both are interesting perspectives, btw). 

@@ -1,7 +1,7 @@
 ---
 title: AI Agent Primitives
-date: 2026-04-28T15:59:27-06:00
-lastmod: 2026-04-28T15:59:27-06:00
+date: 2026-05-04T15:59:27-06:00
+lastmod: 2026-05-04T15:59:27-06:00
 draft: false
 description: ""
 tags:
