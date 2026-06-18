@@ -2,7 +2,7 @@
 title: Tokenmaxxing
 date: 2026-04-28T14:49:17-06:00
 lastmod: 2026-04-28T14:49:17-06:00
-draft: true
+draft: false
 description: ""
 tags:
   - ai-tips
